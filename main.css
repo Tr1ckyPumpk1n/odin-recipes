@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-image: url("https://www.allrecipes.com/thmb/JQ1ONehg7Ab1XwoeSsGki70__4I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/memphis-bbq-pork-totchos-73b1bf7821bb467a948e04795aa85894.jpeg");
+}
+
+.container {
+    width: 50vw;
+    min-width: 500px;
+    margin: 30px auto;
+    padding: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: #eaeaeaca;
+}
+
+h1 {
+    font-size: calc(1em + 2vw);
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+li a {
+    font-size: calc(0.5em + 1vw);
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: brown;
+}
+
+.logo {
+    background-size: cover;
+    background-image: url("./utils/chef_logo.png");
+    height: 400px;
+    width: 400px;
+    margin: auto;
+}

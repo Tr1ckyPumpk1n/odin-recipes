@@ -3,15 +3,22 @@
 }
 
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+body.main {
     background-size: cover;
     background-image: url("https://www.allrecipes.com/thmb/JQ1ONehg7Ab1XwoeSsGki70__4I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/memphis-bbq-pork-totchos-73b1bf7821bb467a948e04795aa85894.jpeg");
 }
 
+body.non_main {
+    background-color: bisque;
+}
+
 .container {
     width: 50vw;
-    min-width: 500px;
+    min-width: 350px;
     margin: 30px auto;
     padding: 40px;
     border: 2px solid gray;
@@ -19,23 +26,25 @@ body {
     background-color: #eaeaeaca;
 }
 
-h1 {
+h1.odin {
     font-size: calc(1em + 2vw);
     text-align: center;
 }
 
-ul {
+ul.menu {
+    margin: auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style-type: none;
 }
 
-li a {
+.menu a {
     font-size: calc(0.5em + 1vw);
     text-decoration: none;
     display: inline-block;
-    margin: 2px;
+    margin: 0px 0 10px 0;
 }
 
 a:visited {
@@ -49,7 +58,108 @@ a:hover {
 .logo {
     background-size: cover;
     background-image: url("./utils/chef_logo.png");
-    height: 400px;
-    width: 400px;
-    margin: auto;
+    height: calc(2em + 30vw);
+    width: calc(2em + 30vw);
+    margin: 30px auto;
+}
+
+.heading {
+    font-size: calc(0.5rem + 2vw);
+    margin: 20px 0px calc(0.1rem + 0.5vw) 0px;
+    background-color: burlywood;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.picture {
+    display: block;
+    max-width: 80%;
+    width: calc(1em + 45vw);
+    margin: 40px auto 20px auto;
+    border: 0.5px solid gray;
+    border-radius: 20px;
+}
+
+footer {
+    width: 100%;
+    margin: 0px auto;
+    border-top: 2px solid gray;
+    padding: calc(0.5rem + 0.2vw);
+    background-color: #eaeaeaca;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
+    font-size: calc(0.5em + 1vw);
+}
+
+.recipe {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 10px 2%;
+    font-size: calc(0.5em + 1vw);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.one {
+    grid-column: span 1;
+}
+
+.two {
+    grid-column: span 2;
+}
+
+.recipe ul {
+    padding: 1% 1% 1% 4%;
+    margin: 0 3%;
+}
+
+ol {
+    padding: 1% 1% 1% 4%;
+}
+
+.recipe h3 {
+    text-align: center;
+    font-size: calc(1em + 1vw);
+    margin: 5px auto;
+}
+
+.recipe li {
+    margin-bottom: 10px;
+}
+
+.special {
+    display: inherit;
+}
+
+.cover {
+    border: 2px solid brown;
+    background-color: burlywood;
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+
+.desc {
+    text-align: justify;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 550px) {
+    .one {
+        grid-column: span 2;
+    }
 }
